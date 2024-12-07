@@ -9,10 +9,7 @@ const Daily = () => {
 
   return (
     <View style={styles.container}>
-      <Button
-        title='Próxima tela'
-        onPress={handleNextPage}
-      />
+      <Button title="Próxima tela" onPress={handleNextPage} />
     </View>
   );
 };
