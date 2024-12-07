@@ -1,23 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
+import styles from './NewProduct.style';
+
 const NewProduct = () => {
   return (
-    <View
-      style={{
-        backgroundColor: 'blue',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-    }}>
-      <Text
-        style={{
-          color: 'white',
-          fontSize: 25,
-          fontWeight: 500,
-        }}
-      >
+    <View style={styles.container}>
+      <Text style={styles.title}>
         NewProduct
       </Text>
     </View>

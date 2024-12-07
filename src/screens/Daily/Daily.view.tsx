@@ -1,33 +1,17 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { Button, View } from 'react-native';
 
-import { RootStackParamList } from '../../routes/stack.routes';
+import styles from './Daily.style';
+import useDaily from './useDaily';
 
 const Daily = () => {
-  const { navigate } = useNavigation<NavigationProp<RootStackParamList>>();
+  const { handleNextPage } = useDaily();
 
   return (
-    <View
-      style={{
-        backgroundColor: 'blue',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-    }}>
-      <Text
-        style={{
-          color: 'white',
-          fontSize: 25,
-          fontWeight: 500,
-        }}
-      >
-        Daily
-      </Text>
+    <View style={styles.container}>
       <Button
-        title='Adicionar produto'
-        onPress={() => navigate('NewProduct')}
+        title='Próxima tela'
+        onPress={handleNextPage}
       />
     </View>
   );
